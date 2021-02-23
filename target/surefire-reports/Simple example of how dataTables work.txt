@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Simple example of how dataTables work
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 70.861 s - in Simple example of how dataTables work
