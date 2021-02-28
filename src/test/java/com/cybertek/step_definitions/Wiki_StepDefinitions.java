@@ -1,20 +1,16 @@
 package com.cybertek.step_definitions;
 
 import com.cybertek.pages.WikiPage;
-import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Wiki_StepDefinitions {
     WikiPage wikiPage = new WikiPage();
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
-
     @Given("User is on Wikipedia home page")
     public void user_is_on_wikipedia_home_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("wikiUrl"));
@@ -40,12 +36,8 @@ public class Wiki_StepDefinitions {
 
     @Then("User sees {string} in the main header")
     public void userSeesInTheMainHeader(String arg0) {
-        BrowserUtils.sleep(2);
         String actualHeaderText = wikiPage.mainHeader.getText();
         String expectedHeaderText = arg0;
-        System.out.println("arg0 = " + arg0);
-        System.out.println("actualHeaderText = " + actualHeaderText);
-
         Assert.assertTrue(actualHeaderText.equals(expectedHeaderText));
         Assert.assertTrue(wikiPage.mainHeader.isDisplayed());
     }

@@ -24,6 +24,7 @@ Feature: Wikipedia search feature
     Examples: search terms we are going to search in wikipedia
       | searchValue | expectedMainHeader | expectedTitle |
       | Steve Jobs  | Steve Jobs         | Steve Jobs    |
+      | Elon Mask   | Elon Mask          | Elon Mask     |
       | Marie Curie | Marie Curie        | Marie Curie   |
       | Kobe Bryant | Kobe Bryant        | Kobe Bryant   |
       | Bill Gates  | Bill Gates         | Bill Gates    |
